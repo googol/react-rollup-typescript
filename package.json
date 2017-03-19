@@ -1,0 +1,29 @@
+{
+  "name": "react-rollup-typescript-boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npm run lint && NODE_ENV=production rollup -c",
+    "watch": "rollup -cw",
+    "lint": "tslint --project tsconfig.json --type-check"
+  },
+  "author": "",
+  "devDependencies": {
+    "@types/react": "^15.0.16",
+    "@types/react-dom": "^0.14.20",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "rollup": "^0.41.6",
+    "rollup-plugin-commonjs": "^7.1.0",
+    "rollup-plugin-livereload": "^0.4.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-serve": "^0.1.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.2.2",
+    "tslib": "^1.6.0",
+    "tslint": "^4.3.1",
+    "typescript": "^2.2.0"
+  }
+}
