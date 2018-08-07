@@ -5,7 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 
 const dev = 'development';
 const prod = 'production';
@@ -29,7 +29,7 @@ const plugins = [
             'node_modules/react-dom/index.js': [
                 'render',
             ],
-            'node_modules/react/react.js': [
+            'node_modules/react/index.js': [
                 'Component',
                 'PropTypes',
                 'createElement',
@@ -62,14 +62,13 @@ if (nodeEnv === prod) {
     plugins.push(uglify());
 }
 
-const sourceMap = nodeEnv === dev ? 'inline' : false;
-
 export default {
     plugins,
-    sourceMap,
-    entry: './src/client/main.tsx',
-    dest: './build/bundle.js',
-    format: 'iife',
+    input: './src/client/main.tsx',
+    output: {
+        file: './build/bundle.js',
+        format: 'iife',
+    },
 };
 
 function parseNodeEnv(nodeEnv) {
