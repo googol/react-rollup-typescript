@@ -1,5 +1,10 @@
 # Boilerplate for React with rollup and typescript
 
+## Attention
+I haven't really kept this up to date.
+I did update the packages on 2018-08-07 but at least the watch script doesn't run properly.
+A PR for that is very welcome if someone wants to fix it.
+
 ## Install dependencies
 Just run `npm install`.
 
